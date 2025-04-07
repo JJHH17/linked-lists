@@ -38,6 +38,11 @@ export class LinkedList {
     size() {
         console.log(this.length);
     }
+
+    // Returns the head element
+    getHead() {
+        console.log(this.head);
+    }
 }
 
 // node class
