@@ -24,7 +24,19 @@ export class LinkedList {
     prepend(value) {
         let node = new Node(value);
 
-        this.head = node;
+        if (this.head === null) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            node.nextNode = this.head;
+            this.head = node;
+        }
+        this.length++;
+    }
+
+    // Returns the size/total number of nodes
+    size() {
+        console.log(this.length);
     }
 }
 

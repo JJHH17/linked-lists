@@ -5,6 +5,9 @@ const list = new LinkedList();
 
 list.append("cat");
 list.append("dog");
+list.append("animal");
+list.prepend("wolf");
 list.append("bird");
 
-console.log(list);
+
+list.size();
