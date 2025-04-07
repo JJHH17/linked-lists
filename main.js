@@ -11,4 +11,4 @@ list.append("bird");
 
 
 list.size();
-list.getHead();
+list.getTail();

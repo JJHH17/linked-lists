@@ -43,7 +43,12 @@ export class LinkedList {
     getHead() {
         console.log(this.head);
     }
+
+    getTail() {
+        console.log(this.tail);
+    }
 }
+
 
 // node class
 export class Node {
