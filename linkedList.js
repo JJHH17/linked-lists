@@ -1,38 +1,37 @@
 // Linked list class
 export class LinkedList {
     constructor() {
-        this.length = 0;
         this.head = null;
         this.tail = null;
+        this.length = 0;
     }
 
-    // Appends node to end of list
+    // Appends node to end of list (unless a head doesn't exist)
     append(value) {
-        let newNode = new Node();
-        newNode.addValue(value);
+        let node = new Node(value);
 
         if (this.head === null) {
-            this.head = newNode;
-            this.length ++;
+            this.head = node;
+            this.tail = node;
         } else {
-            this.tail += newNode;
-            this.length ++;
+            this.tail.nextNode = node;
+            this.tail = node;
         }
+        this.length++;
+    }
+
+    // Prepends node to head
+    prepend(value) {
+        let node = new Node(value);
+
+        this.head = node;
     }
 }
 
-// Node class
+// node class
 export class Node {
-    constructor() {
-        this.value = null;
+    constructor(value = null) {
+        this.value = value;
         this.nextNode = null;
-    }
-
-    addValue(data) {
-        this.value = data;
-    }
-
-    addNextNode(node) {
-        this.nextNode = node;
     }
 }
