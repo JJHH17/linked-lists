@@ -61,6 +61,9 @@ export class LinkedList {
         console.log(current.value);
         // Add error handling/index handling for this
     }
+
+    // Removes tail/last element from list
+    
 }
 
 
