@@ -39,13 +39,27 @@ export class LinkedList {
         console.log(this.length);
     }
 
-    // Returns the head element
+    // Returns the head/first element
     getHead() {
         console.log(this.head);
     }
 
+    // Returns tail/last element
     getTail() {
         console.log(this.tail);
+    }
+
+    // Returns element at specific index
+    at(index) {
+        let current = this.head;
+        let i = 0;
+
+        while (i < index) {
+            current = current.nextNode;
+            i++; 
+        }
+        console.log(current.value);
+        // Add error handling/index handling for this
     }
 }
 

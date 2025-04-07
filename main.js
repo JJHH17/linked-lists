@@ -10,5 +10,4 @@ list.prepend("wolf");
 list.append("bird");
 
 
-list.size();
-list.getTail();
+list.at(0);
