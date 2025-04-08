@@ -12,3 +12,4 @@ list.append("bird");
 list.contains("hello");
 list.contains("dog");
 
+list.find("cat");

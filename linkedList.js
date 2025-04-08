@@ -99,6 +99,20 @@ export class LinkedList {
         }
         return false; // False if value is not found
     }
+
+    // Returns index of node containing value, else null if not existing
+    find(value) {
+        let current = this.head;
+        let i = -1;
+
+        while(current) {
+            ++i;
+            if (current.value === value) console.log(i);
+
+            current = current.nextNode;
+        }
+        return -1;
+    }
 }
 
 
