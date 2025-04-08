@@ -13,3 +13,5 @@ list.contains("hello");
 list.contains("dog");
 
 list.find("cat");
+
+list.toString();

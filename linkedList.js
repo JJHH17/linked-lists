@@ -113,6 +113,18 @@ export class LinkedList {
         }
         return -1;
     }
+    
+    // Presents nodes in list to a string 
+    toString() {
+        let current = this.head;
+
+        while(current) {
+            console.log(`(${current.value}) ->`);
+
+            current = current.nextNode;
+        }
+        console.log("null");
+    }
 }
 
 
