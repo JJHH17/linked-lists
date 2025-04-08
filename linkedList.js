@@ -125,6 +125,49 @@ export class LinkedList {
         }
         console.log("null");
     }
+
+    // Inserts a node at a given index
+    insertAt(value, index) {
+        let node = this.head;
+        if (index === 0) {
+            value.nextNode = node;
+            this.head = value;
+            return;
+        }
+
+        while(--index){
+            if (node.nextNode !== null) {
+                node = node.nextNode;
+            } else {
+                throw Error("index is out of bounds");
+            }
+        }
+        let tempValue = node.nextNode;
+        node.nextNode = value;
+        value.nextNode = tempValue;
+    }
+
+    // Removes node at a given index
+    removeAt(index) {
+        let node = this.head; 
+        if (index === 0) {
+            if(node !== null) {
+                node = node.nextNode;
+                this.head = node;
+            }
+        } else {
+            return "Index out of bounds";
+            return;
+        }
+        while (--index) {
+            if (node.nextNode !== null) {
+                node = node.nextNode;
+            } else {
+                return "Index out of bounds";
+            }
+        }
+        node.nextNode = node.nextNode.nextNode;
+    }
 }
 
 

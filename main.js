@@ -15,3 +15,7 @@ list.contains("dog");
 list.find("cat");
 
 list.toString();
+
+list.removeAt(1);
+
+list.toString();
