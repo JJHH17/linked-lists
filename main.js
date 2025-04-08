@@ -8,16 +8,7 @@ list.append("dog");
 list.append("animal");
 list.prepend("wolf");
 list.append("bird");
-list.size();
-list.getTail();
 
-list.pop();
-list.size();
+list.contains("hello");
+list.contains("dog");
 
-list.pop();
-list.size();
-list.getTail();
-
-
-
-list.at(0);

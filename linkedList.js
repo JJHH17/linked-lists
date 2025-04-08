@@ -86,6 +86,19 @@ export class LinkedList {
         }
         return temp;
     }
+
+    // Returns true if value is detected in list, else returns false
+    contains(value) {
+        let current = this.head;
+
+        while (current !== null) {
+            if (current.value === value) {
+                return true; // Meaning value was found
+            }
+            current = current.nextNode;
+        }
+        return false; // False if value is not found
+    }
 }
 
 
